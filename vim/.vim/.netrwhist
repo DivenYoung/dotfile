@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/diven/.vim/autoload'
+let g:netrw_dirhist_3='/Users/diven/OneDrive/Projects/Learning/01-vim/001-vim8-book-code/Chapter02'
+let g:netrw_dirhist_2='/Users/diven/.vim'
+let g:netrw_dirhist_1='/Users/diven/OneDrive/Projects/Learning/monitoring-solution/01-prometheus/02-prome-home/prometheus.yml'
