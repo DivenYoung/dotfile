@@ -13,6 +13,9 @@ set shiftwidth=4            " 用于自动缩进的空格数
 
 set backspace=2             " 在多数终端上修正退格 Backspace 的行为
 
+set showcmd                 " 显示键入指令
+
+set mouse=a                 " 支持鼠标
 
 set foldmethod=indent       " 基于缩进的代码折叠
 
@@ -30,13 +33,25 @@ silent! helptags ALL        " 为所有插件加载帮助文档
 
 let mapleader=","           " 设置先导键
 
+
+set t_Co=256                 " 启用256色
+
+set cursorline               " 光标所在的当前行高亮
+
 if has('python3')
     let g:gundo_prefer_python3 = 1
 endif
 
+set nobackup
+
 set undofile
 
-set undodir="/Users/diven/.vim/undodir"
+set undodir=~/.vim/undodir/
+
+if !isdirectory(&undodir)
+    call mkdir(&undodir, 'p', 0700)
+endif
+
 
 au BufWrite * :Autoformat   " 保存后格式代码
 
